@@ -87,7 +87,7 @@ npm test
 <a name="thought"></a>
 ## Thought process
 
-1. Separation of concerns: The code has been organized into different modules, with each module having a specific responsibility. For example, there is a folder (/backend/app) for handling the API routes, a module for handling the train timetable data, and a module for parsing the input parameters. So that in future , if we integrate front end code in this app, there is a clear seggragation of concepts.
+1. Separation of concerns: The code has been organized into different modules, with each module having a specific responsibility. For example, there is a folder (/backend/app) for handling the API routes and communication with Time table json data which is kept in a seperate Json file, a test module for handling tests. So that in future , if we integrate front end code in this app, there is a clear seggragation of concepts.
 2. Created a util.js file to handle the utlitiy method to convert 12hr timr format to 24hr format. This file can be scaled further to add more util methods such as convertTo24Hour 
 3. Single Responsibility Principle: Each function or module has a single responsibility, and is focused on accomplishing that responsibility. For example, the getTrainScheduleByLine function is responsible for loading the train timetable data based on train line input, while the getTrainScheduleByDeparture function is responsible for filtering the timetable data based on the input parameters such as train number along with departure time.
 4. Asynchronous programming: Asynchronous programming has been used throughout the code to ensure that the API can handle multiple requests at the same time without blocking the event loop.
@@ -95,7 +95,7 @@ npm test
    - 500 incase there is an error thrown by API
    - 404 if not found
    - 200 GET API success
-6. Memory cache concept ahs been added to avoid hitting the api for repoeated request
+6. Memory cache concept has been added to avoid hitting the api for repoeated request
 7. Handle various scenarios related to 12hr and 24hr format inputs for simplicity 
 
 <a name="improve"></a>
