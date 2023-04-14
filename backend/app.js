@@ -96,7 +96,7 @@ app.get("/schedule/:line/:departure", async (req, res) => {
   }
 });
 
-async function getTrainScheduleByDeparture(trainLine, departureTime) {
+function getTrainScheduleByDeparture(trainLine, departureTime) {
   return new Promise((resolve, reject) => {
     const cacheKey = `${trainLine}-${departureTime}`;
     const cachedSchedule = cache.get(cacheKey);
