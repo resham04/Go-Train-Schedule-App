@@ -3,9 +3,9 @@
 # Table of Contents
 1. [ Installation ](#installation)
 2. [ Endpoints ](#endpoints)
-3. [ Usuage ](#Usage)
+3. [ Usage ](#Usage)
 4. [ Tests ](#test)
-5. [ Thought process ](#thought)
+5. [ Thought Process ](#thought)
 6. [ Areas to Improve ](#improve)
 
 
@@ -87,7 +87,7 @@ npm test
 <a name="thought"></a>
 ## Thought process
 
-1. Separation of concerns: The code has been divided into different modules, each of which is in charge of a particular task. A test module is used for managing tests, and there is a folder (/backend/app) for managing API routes and communication with time table json data that is saved in a separate JSON file. In order to clearly separate the concepts when we integrate front end code into this app in the future.
+1. Separation of concerns: The code has been divided into different modules, each of which is in charge of a particular task. A test module is used for managing tests, and there is a folder (/backend/app) for managing API routes and communication with time table json data that is saved in a separate JSON file. In order to clearly separate the concepts incase this is integrated with UI code into this app in the future.
 2. A util.js file was created to handle the functionality technique to convert 12hr time to 24hr time. This file can be expanded even further to include other useful techniques like convertTo24Hour.
 3. The single responsibility principle states that each function or module has a single task that it is responsible for completing. For instance, the getTrainScheduleByLine function loads the train schedule data based on input for the train line, whereas the getTrainScheduleByDeparture function filters the schedule data based on input for the train number and departure time.
 4. Use of asynchronous programming has been made throughout the code to guarantee that the API can handle several requests concurrently without causing the event loop to become stuck.
