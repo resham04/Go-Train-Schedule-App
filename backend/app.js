@@ -143,7 +143,7 @@ function getTrainScheduleByLine(line) {
 
 app.use((req, res, next) => {
   res.send(
-    " <b>Welcome to Go Train Schedule API along with Example Endpoints</b> <br> " +
+    " <b>Welcome to Go Train Schedule API along with Example Endpoints, Please change the port as per your system</b> <br> " +
       "<br> 1. Full Schedule API -->   http://localhost:3000/schedule <br>" +
       "<br>  2. Get Schedule by Train Line -->  http://localhost:3000/schedule/Lakeshore <br>" +
       "<br>  3. Get Schedule by Train Line and departure (12hr)-->  http://localhost:3000/schedule/Lakeshore/12:00pm <br>" +
