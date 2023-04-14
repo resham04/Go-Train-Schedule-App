@@ -22,7 +22,6 @@ gh repo clone resham04/Go-Train-Schedule-App
 2. Install dependencies:
 ```bash
 npm install --save express
-npm install memory-cache --save
 ```
 <a name="Usage"></a>
 ## Usage
