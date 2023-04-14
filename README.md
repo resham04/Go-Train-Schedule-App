@@ -98,14 +98,15 @@ npm test
 <a name="improve"></a>
 ## Areas to improve code and concepts to scale the app's performance 
 1. Making another end point for fetching the schedule for the arrival time.
-2. To make code more structured, add segregation for api routes and the methods to iterate the Json Data  to handle different use cases example- to fetch the data for Go buses.
-3. Create one shared method to handle all the GET requests and include the memory-cache logic also in it, so that its not redundant.
+2. Create one shared method to handle all the GET requests and include the memory-cache logic also in it, so that it is not redundant.
+3. To make code more structured, which provides routes for api routes for each API entry, controllers to handle methods (handler functions) for handling requests, keep business free logic in it. Then further components can be created for Trains, buses, subways  etc
 4. If your API is returning a large amount of data, implementing pagination to split the data in small chunks and also increases performance on FE
 5. Add more unit test cases as a best practice to make the code quality stronger, so that code is less error prone.
 6. Using databases to store the timetable data like MySQL, MongoDB, or PostgreSQL. Database queries can be optimised for data fetching
 7. Improve caching strategy - although the caching concept is added to the api. this can further be improved by using more robust caching services
 8. CDN : for a use case to serve a global audience, using a content delivery network (CDN) can help to improve performance by caching data in multiple geographic locations around the world. This can reduce latency and improve response times for clients in different regions.
 9. Although this api is public, if this data was sensitive ,we want to consider adding authentication and authorization to ensure that only authorised users can access the API and its data.
+
 
    
    
