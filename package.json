@@ -1,0 +1,23 @@
+{
+  "name": "go-train-schedule-app",
+  "version": "1.0.0",
+  "description": "Go Train Schedule API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resham04/Go-Train-Schedule-App.git"
+  },
+  "author": "Resham Mittal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/resham04/Go-Train-Schedule-App/issues"
+  },
+  "homepage": "https://github.com/resham04/Go-Train-Schedule-App#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "memory-cache": "^0.2.0"
+  }
+}
