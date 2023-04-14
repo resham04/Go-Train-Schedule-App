@@ -87,7 +87,7 @@ npm test
 <a name="thought"></a>
 ## Thought process
 
-1. Separation of concerns: The code has been divided into different modules, each of which is in charge of a particular task. A test module is used for managing tests, and there is a folder (/backend/app) for managing API routes and communication with time table json data that is saved in a separate JSON file. In order to clearly separate the concepts incase this is integrated with UI code into this app in the future.
+1. Separation of concerns: The code has been divided into different modules, each of which is in charge of a particular task. A test module is used for managing tests, and there is a folder (/backend/app) for managing API routes and communication with time table json data that is saved in a separate JSON file. In order to clearly separate the concepts incase this is scaled in future to add more behaviours such as integration with UI code.
 2. A util.js file was created to handle the functionality technique to convert 12hr time to 24hr time. This file can be expanded even further to include other useful techniques like convertTo24Hour.
 3. The single responsibility principle states that each function or module has a single task that it is responsible for completing. For instance, the getTrainScheduleByLine function loads the train schedule data based on input for the train line, whereas the getTrainScheduleByDeparture function filters the schedule data based on input for the train number and departure time.
 4. Use of asynchronous programming has been made throughout the code to guarantee that the API can handle several requests concurrently without causing the event loop to become stuck.
@@ -97,9 +97,9 @@ npm test
 
 <a name="improve"></a>
 ## Areas to improve code and concepts to scale the app's performance 
-1. Making another end point for fetching the schedule for the arrival time
-2. To make code more structured, add segregation for api routes and the methods to iterate the Json Data
-3. Create one shared method to handle all the GET requests and include the memory-cache logic also in it, so that its not redundant
+1. Making another end point for fetching the schedule for the arrival time.
+2. To make code more structured, add segregation for api routes and the methods to iterate the Json Data  to handle different use cases example- to fetch the data for Go buses.
+3. Create one shared method to handle all the GET requests and include the memory-cache logic also in it, so that its not redundant.
 4. If your API is returning a large amount of data, implementing pagination to split the data in small chunks and also increases performance on FE
 5. Add more unit test cases as a best practice to make the code quality stronger, so that code is less error prone.
 6. Using databases to store the timetable data like MySQL, MongoDB, or PostgreSQL. Database queries can be optimised for data fetching
