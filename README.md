@@ -18,7 +18,8 @@ npm install memory-cache --save
 node server.js OR nodemon server
 ```
 This will start the server on port 3000 by default. You can change the port by setting the PORT environment variable.
-To make requests to the API, send HTTP requests to the below endpoint, where it will display the Welcome page of the app
+To make requests to the API, send HTTP requests to the below endpoint, where it will display the Welcome page of the app. 
+Example
 ```bash
 http://localhost:3000/
 ```
