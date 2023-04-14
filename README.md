@@ -5,7 +5,7 @@
 2. [ Endpoints ](#endpoints)
 3. [ Usuage ](#Usage)
 4. [ Tests ](#test)
-5. [Thought process] (#thought)
+5. [ Thought process ](#thought)
 6. [ Areas to Improve ](#improve)
 
 
