@@ -25,7 +25,7 @@ app.get("/schedule", async (req, res, next) => {
     if (!schedule) {
       console.log(`Returning cached result for`);
       schedule = trainTimeTable;
-      cache.put("schedule", schedule, 60 * 1000); // Cache for 60 seconds
+      cache.put("schedule", schedule, 60 * 100); // Cache for 60 sec
     }
     res.status(200).json({
       message: "Full Schedule fetched successfully",
@@ -113,7 +113,7 @@ function getTrainScheduleByDeparture(trainLine, departureTime) {
         reject(`Train schedule not found`);
       } else {
         console.log(`Caching result for ${cacheKey}`);
-        cache.put(cacheKey, trainSchedule, 60 * 100); // Cache for 1 sec
+        cache.put(cacheKey, trainSchedule, 60 * 100); //Cache for 60 sec
         resolve(trainSchedule);
       }
     }
@@ -132,7 +132,7 @@ function getTrainScheduleByLine(line) {
         return schedule.line === line;
       });
       if (trainSchedule.length > 0) {
-        cache.put(`${line}`, trainSchedule, 60 * 1000); // Cache for 1 min
+        cache.put(`${line}`, trainSchedule, 60 * 100); //Cache for 60 sec
         resolve(trainSchedule);
       } else {
         reject(`No train schedule found for line ${line}`);
